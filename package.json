@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node node_modules/gitbook/bin/gitbook.js build -f site -o _book .",
+    "build": "node node_modules/gitbook/bin/gitbook.js build -f site -o _book . && rm sources/html-editor/bower_components/lodash/README.md",
+    "fixbuild": "gitbook build -f site -o _book . && rm sources/html-editor/bower_components/lodash/README.md",
     "gh-pages": "cp -r _book/* ."
   },
   "repository": {
